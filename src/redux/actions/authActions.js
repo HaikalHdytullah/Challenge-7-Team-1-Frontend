@@ -121,7 +121,7 @@ export const loginWithGoogle = (accessToken) => async (dispatch) => {
       await dispatch({
         type: LOGIN,
         payload: result.token,
-        user: user,
+        user: result.user,
       });
       await Swal.fire({
         title: "Success",
